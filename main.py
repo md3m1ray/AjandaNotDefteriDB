@@ -79,7 +79,7 @@ class AyarlarPenceresi:
     def githubdan_guncelle(self):
         # GitHub API'si aracılığıyla kod deposundan en son sürümü almak için istek gönder
         user = "md3m1ray"  # GitHub kullanıcı adınızı buraya girin
-        repo = "AjandaNotDefteriDB"  # GitHub deposunun adını buraya girin
+        repo = "AjandaNotDefteriDb"  # GitHub deposunun adını buraya girin
         branch = "master"  # Varsayılan olarak ana branch kullanılır, gerektiğinde değiştirin
         url = f"https://api.github.com/repos/{user}/{repo}/git/refs/heads/{branch}"
         response = requests.get(url)
@@ -376,7 +376,7 @@ class Ajanda:
                     self.cursor.execute("DELETE FROM notlar WHERE tarih=%s AND not_metni=%s",
                                         (tarih, silinecek_not_metni))
                     self.connection.commit()
-                    messagebox.showinfo("Not Silme", "Not başarıyla silindi.")
+                    messagebox.showinfo("Not Silindi", "Not başarıyla silindi.")
                 except Exception:
                     messagebox.showerror("Hata",
                                          "Veritabanından not silinirken bir hata oluştu. "
