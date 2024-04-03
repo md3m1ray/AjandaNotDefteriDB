@@ -377,7 +377,7 @@ class Ajanda:
                     self.connection.commit()
                     messagebox.showinfo("Not Silme", "Not başarıyla silindi.")
                 except Exception:
-                    messagebox.showerror("Hata", "Veritabanından not silinirken bir hata oluştu")
+                    messagebox.showerror("Hata", "Veritabanından not silinirken bir hata oluştu. Daha sonra tekrar deneyiniz")
             else:
                 messagebox.showerror("Hata", "Geçersiz not indeksi.")
         else:
