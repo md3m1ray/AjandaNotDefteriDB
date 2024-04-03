@@ -352,8 +352,6 @@ class Ajanda:
         except Exception:
             messagebox.showerror("Hata", "Veritabanı yükleme hatası")
 
-
-
     def not_ekle(self, tarih, not_metni):
         if tarih in self.notlar:
             self.notlar[tarih].append(not_metni)
@@ -404,8 +402,9 @@ def kullanici_tablosunu_olustur(cursor):
                             not_metni TEXT
                         )""")
 
+
 # Kullanıcı bilgilerini tabloya ekleme
-def kullanici_ekle(cursor, baglanti):
+def kullanici_ekle(cursor, connection):
     cursor.execute("SELECT COUNT(*) FROM kullanici")
     kayit_sayisi = cursor.fetchone()[0]
 
