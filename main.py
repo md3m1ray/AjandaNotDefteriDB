@@ -113,7 +113,7 @@ class AyarlarPenceresi:
         else:
             messagebox.showerror("Hata", "En son güncelleme bilgisi alınamadı. Daha sonra tekrar deneyiniz")
 
-        messagebox.showinfo("Güncelleme", "Uygulama başarıyla güncellendi!. Lütfen Uygulamayı Yeniden Başlatın.")
+        messagebox.showinfo("Güncelleme", "Lütfen Uygulamayı Yeniden Başlatın.")
 
 
 class AjandaUygulamasi:
