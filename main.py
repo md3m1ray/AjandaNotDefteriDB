@@ -7,6 +7,7 @@ import os
 import requests
 import base64
 from mailersend import emails
+import babel.numbers
 
 
 class AyarlarPenceresi:
@@ -377,7 +378,9 @@ class Ajanda:
                     self.connection.commit()
                     messagebox.showinfo("Not Silme", "Not başarıyla silindi.")
                 except Exception:
-                    messagebox.showerror("Hata", "Veritabanından not silinirken bir hata oluştu. Lütfen daha sonra tekrar deneyiniz")
+                    messagebox.showerror("Hata",
+                                         "Veritabanından not silinirken bir hata oluştu. "
+                                         "Lütfen daha sonra tekrar deneyiniz")
             else:
                 messagebox.showerror("Hata", "Geçersiz not indeksi.")
         else:
